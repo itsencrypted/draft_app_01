@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, sized_box_for_whitespace
+
 import 'package:draft_app_01/components/button.dart';
 import 'package:draft_app_01/components/card_hotel.dart';
 import 'package:draft_app_01/models/hotel_model.dart';
+import 'package:draft_app_01/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,9 +28,9 @@ class _HomePageState extends State<HomePage> {
                       top: 30, bottom: 5, right: 10, left: 10),
                   child: Container(
                       height: 50,
-                      decoration: BoxDecoration(
-                          color: Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(20.0),
+                      decoration: BoxDecoration(color: kGreenish,
+                          //borderRadius: BorderRadius.circular(20.0),
+                          // ignore: prefer_const_literals_to_create_immutables
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
@@ -38,6 +41,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Container(
                     height: 500,
+                    margin: EdgeInsets.symmetric(horizontal: 50),
                     child: ListView.builder(
                         itemCount: hotels.length,
                         itemBuilder: (BuildContext context, int index) {
@@ -52,7 +56,7 @@ class _HomePageState extends State<HomePage> {
           ),
           DharmaButton(
             onPressed: () {},
-            titleOfButton: 'Click me',
+            titleOfButton: 'CLICK HERE',
           )
         ],
       ),

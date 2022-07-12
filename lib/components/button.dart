@@ -5,23 +5,24 @@ import 'package:flutter/material.dart';
 
 class DharmaButton extends StatelessWidget {
   final String? titleOfButton;
-  final Function? onPressed;
+  final VoidCallback? onPressed;
 
   DharmaButton({this.titleOfButton, @required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-        onPressed: () {},
+    return TextButton(
+        onPressed: onPressed,
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: LinearGradient(colors: [kGreenish, kLightGreen]),
+            borderRadius: BorderRadius.circular(15),
+            //gradient: LinearGradient(colors: [kGreenish, kLightGreen]),
+            color: Colors.black,
           ),
           padding: EdgeInsets.all(15.0),
           child: Text(
             titleOfButton!,
-            style: TextStyle(color: Colors.black54),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ));
   }
